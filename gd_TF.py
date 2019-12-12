@@ -107,3 +107,13 @@ with tf.Session() as sess:
         if i % 1000 == 0:
             print("Cost after iteration %i %f" % (i, err_sgd))
         cf_sgd.append(err_sgd)
+        
+       
+plt.semilogy(cf_sgd, label='GD')
+plt.xlabel('Epochs')
+plt.ylabel('Error')
+plt.legend(loc='best')
+plt.tight_layout()
+plt.show()
+
+
